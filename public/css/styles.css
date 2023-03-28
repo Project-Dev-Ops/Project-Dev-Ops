@@ -11,13 +11,18 @@ body{
     position: relative;
 }
 .main{
-    position: relative;
+    position: center;
 }
 
 .homeImage{
     display: flex;
     justify-content: center;
     
+    
+}
+.homeImage:hover{
+    transition: all 1.0s;
+    transform: rotate(3600);
 }
 
 .bottom{
@@ -29,5 +34,28 @@ body{
     border-radius: 30px;
     padding: 20px;
     border-style: none;
+    border: 50px 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.bottomhome:active {
+    color: rgb(174, 17, 0);
+  }
+
+#leaf1{
+    background-position: left bottom;
+    transform: rotate(30deg);
+}
+
+#leaf2{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-position: 25%;
+    transform: rotate(-30deg);
+    z-index: -99;
+    top: 50%;
+    left: 80%;
 }
