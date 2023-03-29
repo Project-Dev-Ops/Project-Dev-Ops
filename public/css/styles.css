@@ -5,6 +5,9 @@ body{
 }
 
 .texthome{
+    margin-top: 50px;
+}
+#texthome{
     color: black;
     size: 100px;
     text-align: center;
@@ -17,12 +20,17 @@ body{
 .homeImage{
     display: flex;
     justify-content: center;
-    
+    margin-top: 50px;
+}
+.homeImage:hover{
+    transition: all 3.0s;
+    transform: rotate(360deg);
 }
 
 .bottom{
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 .bottomhome{
     background-color: rgb(240, 117, 9);
@@ -30,4 +38,12 @@ body{
     padding: 20px;
     border-style: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium ;
+    font-weight: 700;
+    border: 50px;
 }
+
+.bottomhome:active{
+    color: rgb(209, 69, 13);
+}
+
