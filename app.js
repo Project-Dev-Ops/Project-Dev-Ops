@@ -7,6 +7,8 @@ const lodash = require("lodash");
 
 
 
+
+
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
@@ -56,3 +58,4 @@ app.listen('3000', function(err){
         console.log("Server is running on port 3000.")
     }
 })
+
