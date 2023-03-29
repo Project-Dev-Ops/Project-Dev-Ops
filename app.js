@@ -28,13 +28,11 @@ app.get('/login', (req, res) => {
 app.get('/register', (req, res) => {
     res.render('register')
 });
-
 app.get('/about', (req, res) => {
     res.render('about')
 });
-
 app.get('/menu', (req, res) => {
-    res.render('menu')
+    res.render('./menu.ejs')
 });
 
 app.get('/order', (req, res) => {
