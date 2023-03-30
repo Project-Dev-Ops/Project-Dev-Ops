@@ -86,6 +86,10 @@ app.get('/Drinks', (req, res) => {
     res.render('Drinks.ejs')
 });
 
+app.get('/cart1', (req, res) => {
+    res.render('cart1.ejs')
+});
+
 app.get('/order', (req, res) => {
     res.render('order')
 });
