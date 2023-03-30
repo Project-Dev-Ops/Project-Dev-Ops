@@ -10,22 +10,31 @@
 <body>
     <%-include('partials/Header')%>
     <div class="topicMenu">
-        <h2>Menu</h2>
-        <h3>Category</h3>
+        <h2 style="font-weight: bolder;">Menu</h2>
+        <h4>Category</h4>
     </div>
     
     <div class="tableBox">
-        <table>
-            <tr class="category">
-                <td><img src="/public/images/bibimbap.png" alt="Food" onclick="document.location='/foodMenu.ejs'" width="50px" height="50px"></td>
-                <td><img src="" alt="Appetizers"></td>
-                <td><img src="" alt="Drinks"></td>
+        <table class="category">
+            <tr class="table" >
+                <td><a href="/foodMenu">
+                    <img src="/public/images/bibimbap.png" alt="Food" width="70px" height="70px"></a></td>
+                <td><img src="/public/images/logo.png" alt="Appetizers" width="70px" height="70px"></td>
+                <td><img src="/public/images/logo.png" alt="Drinks" width="70px" height="70px"></td>
+                
+
+            </tr>
+            <tr class="table">
+                <td class="tableBox"><h4>Food</h4></td>
+                <td class="tableBox"><h4>Appetizers</h4></td>
+                <td class="tableBox"><h4>Drinks</h4></td>
             </tr>
         </table>
+        
     </div>
 
     <div class="recommend">
-        <h2>Recommend</h2>
+        <h2 style="font-weight: bolder;">Recommend</h2>
     </div>
 
     <div class="recommend1">

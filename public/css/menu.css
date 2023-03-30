@@ -8,7 +8,18 @@ body{
     background-color:rgb(213, 73, 27);
     display: flex;
     gap: 25px;
-    text-align: center;
+    border-radius: 2rem;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 15px;
+    width: 300px;
+    margin: auto;
+}
+.table{
+    border-radius: 2rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    
 }
 
 .recommend1 {
@@ -39,6 +50,7 @@ body{
 
 .menu-des h4{
     text-align: start;
+    font-weight: bolder;
 }
 
 .box {
@@ -46,7 +58,11 @@ body{
     margin-right: 10px;
 }
 
+
 .tableBox{
-    margin-left: 42%;
+    padding: 15px;
+    padding-top:1px;
+    color: white;
 }
+
 

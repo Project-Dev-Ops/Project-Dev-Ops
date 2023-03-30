@@ -37,7 +37,7 @@ app.get('/menu', (req, res) => {
 });
 
 app.get('/foodMenu', (req, res) => {
-    res.render('foodMenu.ejs')
+    res.render('./foodMenu')
 });
 
 app.get('/order', (req, res) => {
