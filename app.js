@@ -73,12 +73,25 @@ app.get('/about', (req, res) => {
     res.render('about')
 });
 app.get('/menu', (req, res) => {
+    console.log(req.session.cart)
     res.render('./menu.ejs')
 });
 
 app.get('/foodMenu', (req, res) => {
+    console.log(req.session.cart)
     res.render('foodMenu.ejs')
 });
+
+app.post('/addToCart', (req , res ) => {
+    const cart = req.session.cart? req.session.cart : [] ;
+    cart.push(req.body);
+    // console.log(cart)
+
+
+    req.session.cart = cart;
+    res.redirect('/foodMenu');
+})
+
 app.get('/Appetizers', (req, res) => {
     res.render('Appetizers.ejs')
 });
