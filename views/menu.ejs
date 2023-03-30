@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+    <link rel="stylesheet" href="/public/css/menu.css">
 </head>
-<body style="background-color: palevioletred;">
+<body>
     <%-include('partials/Header')%>
     <div class="topicMenu">
         <h2>Menu</h2>
         <h3>Category</h3>
     </div>
     
-    <div class="category">
-        <table border="5px">
-            <tr>
-                <td><img src="" alt="Food" onclick="document.location='/foodMenu.ejs'"></td>
+    <div class="tableBox">
+        <table>
+            <tr class="category">
+                <td><img src="/public/images/bibimbap.png" alt="Food" onclick="document.location='/foodMenu.ejs'" width="50px" height="50px"></td>
                 <td><img src="" alt="Appetizers"></td>
                 <td><img src="" alt="Drinks"></td>
             </tr>
@@ -28,21 +29,33 @@
     </div>
 
     <div class="recommend1">
+        <img src="/public/images/logo.png" alt="logo" class="box" >
+        <div class="menu-des">
         <h4>Korean Barbecue</h4>
         <h5>consists of meats, side dishes, rice, and even soups.</h5>
         <h4>100 Bath</h4>
+
+        </div>
     </div>
 
-    <div class="recommend2">
-        <h4>Bibimbap</h4>
-        <h5>Mixed rice with meat and assorted vegetables</h5>
-        <h4>100 Bath</h4>
+    <div class="recommend1">
+        <img src="/public/images/logo.png" alt="logo" class="box" >
+        <div class="menu-des">
+            <h4>Bibimbap</h4>
+            <h5>Mixed rice with meat and assorted vegetables</h5>
+            <h4>100 Bath</h4>
+        </div>
+        
     </div>
 
-    <div class="recommend3">
+    <div class="recommend1">
+        <img src="/public/images/logo.png" alt="logo" class="box" >
+        <div class="menu-des">
         <h4>Bingsu Strawberry</h4>
         <h5>Milk-based Korean shaved ice dessert with sweet</h5>
         <h4>100 Bath</h4>
+    </div>
+        
     </div>
 
     
