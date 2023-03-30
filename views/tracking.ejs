@@ -26,6 +26,17 @@
             <div class="trackingOder"> 
                 <h3>Oder</h3>
                 
+                <p>Name: <%= order.fullname %></p>
+                <p>Tel: <%= order.telephone_number %></p>
+                <p><%= order.address %></p>
+
+                <% order.items.forEach( item => {%>
+                    <%= item.name %> 
+                    <%= item.note %>
+                    100 THB
+                <%})%>
+
+
             </div>
 
     </body>

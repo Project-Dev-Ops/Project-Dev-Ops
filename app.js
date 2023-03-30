@@ -144,8 +144,12 @@ app.post("/information", async(req,res) =>{
     
 });
 
-app.get("/tracking", (req, res) => {
-  res.render("tracking");
+app.get("/tracking/:id", async(req, res) => {
+    const id = req.params.id; 
+    const order = await Order.findById(id);
+    console.log(order)
+
+    res.render("tracking", {order});
 });
 
 app.post("/register", async (req, res) => {
