@@ -53,10 +53,13 @@ app.get('/tracking', (req, res) => {
     res.render('tracking')
 });
 
+app.get('/staffHome', (req, res) => {
+    res.render('staffHome.ejs')
+});
 
 app.listen('3000', function(err){
     if(!err){
         console.log("Server is running on port 3000.")
     }
-})
+});
 
