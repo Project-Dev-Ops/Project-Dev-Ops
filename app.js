@@ -77,7 +77,7 @@ app.get('/menu', (req, res) => {
 });
 
 app.get('/foodMenu', (req, res) => {
-    res.render('./foodMenu')
+    res.render('foodMenu.ejs')
 });
 
 app.get('/order', (req, res) => {
