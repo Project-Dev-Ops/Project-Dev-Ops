@@ -30,7 +30,9 @@ body{
     margin-bottom: 20px;
     border-radius: 2rem;
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
+    cursor: pointer;
+
 }
 
 @media only screen and (max-width: 500px){

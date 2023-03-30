@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 exports.connect = () => {
-    mongoose.connect('mongodb://52.91.178.190:8105/', {
+    mongoose.connect('mongodb://34.207.227.76:8105/', {
         dbName: "kodnuey"
     })
     .then(()=> console.log('Database is connected'))

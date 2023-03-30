@@ -16,7 +16,7 @@ app.use(session({
     saveUninitialized: true,
     cookie: { maxAge: 3600000 },
     store: MongoStore.create({
-    mongoUrl: `mongodb://52.91.178.190:8105/kodnuey`,
+    mongoUrl: `mongodb://34.207.227.76:8105/kodnuey`,
     dbName: "kodnuey"
     }),
   }));
@@ -82,6 +82,10 @@ app.get('/foodMenu', (req, res) => {
 
 app.get('/cart1', (req, res) => {
     res.render('cart1.ejs')
+});
+
+app.get('/cart2', (req, res) => {
+    res.render('cart2.ejs')
 });
 
 app.get('/order', (req, res) => {
