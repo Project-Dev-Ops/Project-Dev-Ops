@@ -31,11 +31,9 @@ app.get('/login', (req, res) => {
 app.get('/register', (req, res) => {
     res.sendFile(__dirname + '/public/html/register.html');
 });
-
 app.get('/about', (req, res) => {
     res.render('about')
 });
-
 app.get('/menu', (req, res) => {
     res.render('./menu.ejs')
 });
