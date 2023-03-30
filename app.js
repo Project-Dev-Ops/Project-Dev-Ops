@@ -140,7 +140,7 @@ app.post("/information", async(req,res) =>{
     const order = new Order(payload);
     await order.save();
     req.session.cart = new Cart({});
-    res.redirect('/menu');
+    res.redirect('/tracking/'+order.id);
     
 });
 
