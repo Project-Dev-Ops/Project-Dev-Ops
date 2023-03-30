@@ -6,7 +6,6 @@ const app = express();
 const lodash = require("lodash");
 
 
-
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
@@ -34,7 +33,11 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/menu', (req, res) => {
-    res.render('menu')
+    res.render('./menu.ejs')
+});
+
+app.get('/foodMenu', (req, res) => {
+    res.render('foodMenu.ejs')
 });
 
 app.get('/order', (req, res) => {
@@ -56,3 +59,4 @@ app.listen('3000', function(err){
         console.log("Server is running on port 3000.")
     }
 })
+
