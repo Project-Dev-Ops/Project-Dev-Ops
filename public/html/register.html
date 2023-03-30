@@ -9,30 +9,36 @@
 <body>
     <div class="container">
     <div class="form-box">
-        <h1 id="title">Sign Up</h1>
-        <h3></h3>
-        <form>
-            <div class="input-group"> 
-                <div class="input-field" id="nameField">
-                    <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Name">
-                </div>
-
-                <div class="input-field">
-                    <i class="fa-regular fa-envelope"></i>
-                    <input type="email" placeholder="Email">
-                </div>
-
-                <div class="input-field">
-                    <i class="fa-solid fa-unlock"></i>
-                    <input type="password" placeholder="Password">
-                </div>
-            
-            </div>
+        <h1 id="title">Register</h1>
+        
+        <form action="/register" method="post">
             <div class="btn-field">
                 <button type="button" id="signupBtn">Sign Up</button>
                 <button type="button" id="signinBtn" class="disable">Sign In</button>
             </div>
+
+            <div class="input-group"> 
+                <div class="input-field" id="nameField">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-unlock"></i>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+            </div>
+            
+            <div class="btn-submit">
+                <input type="submit" /> 
+            </div> 
+                
+           
         </form>
     </div>
 </div>
@@ -47,7 +53,6 @@
         title.innerHTML = "Sign In";
         signupBtn.classList.add("disable")
         signinBtn.classList.remove("disable")
-
     }
 
     signupBtn.onclick = function(){
@@ -56,7 +61,6 @@
         signupBtn.classList.remove("disable")
         signinBtn.classList.add("disable")
     }
-
 </script>
 </body>
 </html>
