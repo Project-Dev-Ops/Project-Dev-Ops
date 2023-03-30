@@ -4,8 +4,9 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const app = express();
 const lodash = require("lodash");
+const { connect } = require("./config/db");
 
-
+connect();
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -22,11 +23,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-    res.render('login')
+    res.sendFile(__dirname + '/public/html/login.html');
+    // res.render('login')
+    // res.sendFile("../html")
 });
 
 app.get('/register', (req, res) => {
-    res.render('register')
+    res.sendFile(__dirname + '/public/html/register.html');
 });
 
 app.get('/about', (req, res) => {
