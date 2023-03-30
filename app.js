@@ -174,6 +174,15 @@ app.get("/removeItem", (req, res) => {
   res.redirect("/foodMenu");
 });
 
+app.get('/staffHome', async(req, res) => {
+
+    const orders = await Order.find({});
+    console.log(orders)
+
+    res.render('staffView/staffHome.ejs',{orders})
+});
+
+
 app.listen("3000", function (err) {
   if (!err) {
     console.log("Server is running on port 3000.");
