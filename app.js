@@ -80,6 +80,10 @@ app.get('/foodMenu', (req, res) => {
     res.render('foodMenu.ejs')
 });
 
+app.get('/cart1', (req, res) => {
+    res.render('cart1.ejs')
+});
+
 app.get('/order', (req, res) => {
     res.render('order')
 });
