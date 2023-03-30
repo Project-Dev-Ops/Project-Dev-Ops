@@ -9,6 +9,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const { User } = require("./model/user");
 const Cart = require("./model/Cart");
+const { Order } = require("./model/order");
 
 connect();
 app.use(
@@ -115,6 +116,32 @@ app.get("/order", (req, res) => {
 
 app.get("/information", (req, res) => {
   res.render("information");
+});
+app.post("/information", async(req,res) =>{
+    const cart = new Cart(req.session.cart)
+    if(cart.toArray().length == 0) return res.redirect('/menu')
+    console.log(req.body);
+
+    
+    let items = []
+    cart.toArray().forEach( item => {
+        items.push( {'name': item.name , 'note': item.note} )
+    })
+
+    const payload = {
+        owner: req.session.userId,
+        fullname: req.body.fullname,
+        phone_number: req.body.phone_number ,
+        address: req.body.address ,
+        items,
+        total_price: (items.length * 100)
+    }
+
+    const order = new Order(payload);
+    await order.save();
+    req.session.cart = new Cart({});
+    res.redirect('/menu');
+    
 });
 
 app.get("/tracking", (req, res) => {

@@ -21,37 +21,32 @@
             
             <h1 id="Information">Information</h1>
 
-            <form>
+            <form action="/information" method="post">
 
                 <div class="input-info"> 
-                    <h3>Name</h3>
+                    <h3>Fullname</h3>
                     <div class="input-info" id="nameinfo">
-                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Name" name="fullname">
                     </div>
-
-                <div class="input-info"> 
-                    <h3>Email</h3>
-                    <div class="input-info" >
-                        <input type="text" placeholder="Email">
-                </div>
 
                 <div class="input-info"> 
                     <h3>Phone number</h3>
                     <div class="input-info" >
-                        <input type="text" placeholder="Phone number">
+                        <input type="text" placeholder="Phone number" name="phone_number">
                 </div>
 
                 <div class="input-info"> 
                     <h3>Address</h3>
                     <div class="input-info" >
-                        <input type="text" placeholder="Address">
-                </div>     
+                        <input type="text" placeholder="Address" name="address">
+                </div>
+
+                <div class="btn-confirm">
+                    <button type="submit" >Comfirm</button>
+                </div> 
             </form>
 
                 
-            <div class="btn-confirm">
-                <button>Comfirm</button>
-            </div> 
 
                   
                     
