@@ -10,8 +10,8 @@
     <div class="container">
     <div class="form-box">
         <h1 id="title">Log In</h1>
-        <h3></h3>
-        <form>
+        <form id = "registerForm" style="display: none;" method="post" action="/register">
+
             <div class="input-group"> 
                 <div class="input-field" id="nameField">
                     <i class="fa-solid fa-user"></i>
@@ -27,24 +27,49 @@
                     <i class="fa-solid fa-unlock"></i>
                     <input type="password" placeholder="Password">
                 </div>
-            
-            </div>
-            <div class="btn-field">
-                <button type="button" id="signupBtn" class="disable">Sign Up</button>
-                <button type="button" id="signinBtn" >Log in</button>
             </div>
         </form>
+
+        <form id = "loginForm" action="/login" method="post">
+            <div class="btn-field">
+                <button type="button" id="signupBtn">Sign Up</button>
+                <button type="button" id="signinBtn" class="disable">Sign In</button>
+            </div>
+            <div class="input-group"> 
+                <div class="input-field">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" name= "email" placeholder="Email">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-unlock"></i>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                
+            <div class="btn-submit">
+                <input type="submit" /> 
+            </div> 
+                
+                
+                
+
+            </div>
+        </form>
+
+
     </div>
 </div>
 <script>
-    let signupBtn = document.getElementById("signupBtn");
-    let signinBtn = document.getElementById("signinBtn");
+    let registerForm = document.getElementById("registerForm");
+    let loginForm = document.getElementById("loginForm");
     let nameField = document.getElementById("nameField");
     let title = document.getElementById("title");
 
     signinBtn.onclick = function(){
         nameField.style.maxHeight ="0";
         title.innerHTML = "Sign In";
+        loginForm.style.display = "block";
+        registerForm.style.display = "none";
         signupBtn.classList.add("disable")
         signinBtn.classList.remove("disable")
 
@@ -53,6 +78,8 @@
     signupBtn.onclick = function(){
         nameField.style.maxHeight ="60px";
         title.innerHTML = "Sign Up";
+        loginForm.style.display = "none";
+        registerForm.style.display = "block"
         signupBtn.classList.remove("disable")
         signinBtn.classList.add("disable")
     }

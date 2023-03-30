@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+    
+}
+
+.note{
+    border-radius: 20px;
+    background-color: rgb(201, 199, 199);
+    border-style:double;
+}
+
+.button{
+    margin-top: 20px;
+    border-radius: 30px;
+    border-style: none;
+    padding: 5px 5px;
+    background-color: crimson;
+    color: aliceblue;
+}
+
+h3{
+    background-color: rgb(235, 112, 161);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

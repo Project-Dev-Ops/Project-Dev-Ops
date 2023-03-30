@@ -1,6 +1,7 @@
 body{
-    background-color: rgb(237, 179, 179);
+    background-color: rgb(239, 221, 221);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 
 }
 
@@ -54,17 +55,11 @@ body{
     transform: rotate(30deg);
 }
 
-#leaf2{
-    width: 200px;
-    height: 200px;
-    position: relative;
-    background-position: 25%;
-    transform: rotate(-30deg);
-    z-index: -99;
-    top: 50%;
-    left: 80%;
-
+.textabout{
+    
+    margin: 50px;
 }
+
 
 /* Customer navbar */
 .navbar{
@@ -121,7 +116,3 @@ a.icon:hover{
     padding-top: 15px;
 }
 
-menu{
-    background-color: pink;
-
-}
