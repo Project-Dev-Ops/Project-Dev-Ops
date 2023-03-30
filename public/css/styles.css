@@ -51,3 +51,60 @@ body{
     
     margin: 50px;
 }
+
+
+/* Customer navbar */
+.navbar{
+    background-color: #438F68;
+}
+.navPos{
+    height: 32px;
+}
+.nav-link{
+    color: #CFCFCF;
+    font-size:medium ;
+}
+.navContent{
+    color: white;
+    font-size: smaller;
+    margin-top: 20px;
+}
+
+.icon{
+    color: white;
+    font-size: x-large;
+}
+.searchBtn:hover{
+    color: whitesmoke;
+}
+hr{
+    color: white;
+    margin: 0;
+}
+#restaurantName{
+    color: white;
+    text-align: center;
+}
+a.icon{
+    color: black;
+    font-size: x-large;
+}
+a.icon:hover{
+    color: #1f2f1f;
+}
+.searchBtn{
+    background-color: #F28157;
+    color: white;
+    overflow: hidden;
+}
+.active{
+    color: white;
+    font-size: x-large;
+}
+.active:hover{
+    color: whitesmoke;
+}
+.links{
+    padding-top: 15px;
+}
+
