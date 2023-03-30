@@ -53,8 +53,12 @@ app.get('/tracking', (req, res) => {
     res.render('tracking')
 });
 
-app.get('/staffHome', (req, res) => {
-    res.render('staffView/staffHome.ejs')
+app.get('/staffHome', async(req, res) => {
+
+    const orders = await Order.find({});
+    console.log(orders)
+
+    res.render('staffView/staffHome.ejs',{orders})
 });
 
 app.listen('3000', function(err){
