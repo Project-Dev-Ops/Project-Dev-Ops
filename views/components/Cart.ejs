@@ -31,7 +31,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <% if(cart.length == 0 ||!cart) {%>
+        <% if(cart.toArray().length == 0 ) {%>
         <div class="text-center">
           <h4 class="p-3">
             <b>Oops!</b> No items, please add item to your cart
