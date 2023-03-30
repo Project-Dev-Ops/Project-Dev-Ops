@@ -5,22 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Homepage</title>
+    <link rel="stylesheet" href="/public/css/staffHome.css">
 </head>
 <body>
-    <%-include('partials/Header')%>
+    <%-include('../partials/header')%>
 
     <div>
         <h2>Order List</h2>
-        <img src="/public/images/cooking.png" alt="icon-cooking" width="150px">
+        <img src="/public/images/cooking.png" alt="icon-cooking" width="100px">
     </div>
 
     <div class="containOrder">
-        <table>
-            <tr>
+        <table class="table">
+            <tr class="topic">
                 <td>Order On.</td>
                 <td>Status</td>
                 <td>Customer Name</td>
                 <td>Order Items</td>
+            </tr>
+
+            <tr class="detail">
+                <td><div Order On=""></div></td>
+                <td><div Status=""></div></td>
+                <td><div Customer Name=""></div></td>
+                <td><div Order Items=""></div></td>
             </tr>
         </table>
     </div>

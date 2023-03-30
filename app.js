@@ -54,7 +54,7 @@ app.get('/tracking', (req, res) => {
 });
 
 app.get('/staffHome', (req, res) => {
-    res.render('staffHome.ejs')
+    res.render('staffView/staffHome.ejs')
 });
 
 app.listen('3000', function(err){
