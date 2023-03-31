@@ -10,20 +10,24 @@
 <body>
     <%-include('partials/Header')%>
 
-    <div>
-        <h3>Bibimbap</h3>
+    <div class="detail">
+        <h3 style="font-weight: bolder;">Bibimbap</h3>
         <h5>Mixed rice with meat and assorted vegetables</h5>
         <img src="/public/images/bibimbap.png" alt="bibimbap" width="100px">
     </div>
 
-    <div>
-        <h5>Note to restaurant</h5>
-        <input type="text"> 
-    </div>
-
-    <div>
-        <button type="submit" onclick="">Add to cart</button>
-    </div>
     
+    <form action="/addToCart" method="post">
+        <div>
+            <h5>Note to restaurant</h5>
+            <input type="text" name="note">
+            <input type="hidden"  value="Bibimbap" name="name"/>
+        </div>
+        
+        <div>
+            <button type="submit" onclick="">Add to cart</button>
+        </div>
+    </form>
+   
 </body>
 </html>

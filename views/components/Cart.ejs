@@ -1,0 +1,76 @@
+<button
+  type="button"
+  class="btn btn-primary"
+  style="position: fixed; right: 5%; top: 90%; z-index: 9"
+  data-toggle="modal"
+  data-target="#cartModal"
+>
+  <i class="fa fa-shopping-cart"></i>
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="cartModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="cartModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="cartModalLabel">My cart</h3>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <% if(cart.toArray().length == 0 ) {%>
+        <div class="text-center">
+          <h4 class="p-3">
+            <b>Oops!</b> No items, please add item to your cart
+          </h4>
+        </div>
+        <% } else{%>
+        <div class="container-fluid row">
+          <ul>
+            <% cart.toArray().forEach( item => { %>
+                <div class="card mt-3" style="width: 18rem;">
+                    <div class="card-body">
+                      <h3 class="card-title"><%= item.name %></h3>
+                      <h6 class="card-subtitle mb-2 text-muted">Note</h6>
+                      <p class="card-text"><%= item.note %></p>
+                      <a href="/removeItem?id=<%= item.id %>" class="btn btn-danger">Remove</a>
+                    </div>
+                  </div>
+
+
+          
+            <!-- <li><%= item.name %> note: <%= item.note %></li> -->
+            <% }) %>
+          </ul>
+        </div>
+
+        <div class="container-fluid w-100">
+          <hr />
+          <h4>Total price: <%= (Number(cart.toArray().length) * 100) %> THB</h4>
+        </div>
+        <% } %>
+
+        <div class="modal-footer">
+          <a href="/information"
+            ><button class="btn btn-success" id="checkoutBtn">
+              Checkout
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

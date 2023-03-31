@@ -1,0 +1,15 @@
+.topic{
+    background-color:rgb(243, 161, 113);
+    border: 5px;
+    border-radius: 2rem;
+    justify-content: space-around;
+}
+
+body{
+    text-align: center;
+
+}
+
+.detail{
+    background-color: rgb(226, 221, 157);
+}
