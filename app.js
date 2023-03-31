@@ -136,6 +136,51 @@ app.post("/information", async(req,res) =>{
         items,
         total_price: (items.length * 100)
     }
+  });
+
+app.get('/register', (req, res) => {
+    res.sendFile(__dirname + '/public/html/register.html');
+});
+app.get('/about', (req, res) => {
+    res.render('about')
+});
+app.get('/menu', (req, res) => {
+    res.render('./menu.ejs')
+});
+
+app.get('/foodMenu', (req, res) => {
+    res.render('foodMenu.ejs')
+});
+
+app.get('/cart1', (req, res) => {
+    res.render('cart1.ejs')
+});
+
+app.get('/cart2', (req, res) => {
+    res.render('cart2.ejs')
+});
+
+app.get('/order', (req, res) => {
+    res.render('order')
+});
+
+
+app.get('/information', (req,res) =>{
+    res.render('information')
+});
+
+app.get('/tracking', (req, res) => {
+    res.render('tracking')
+});
+
+app.get('/staffHome', (req, res) => {
+    res.render('staffView/staffHome.ejs')
+});
+
+app.listen('3000',  async function(err){
+    if(!err){
+        console.log("Server is running on port 3000.")
+    }
 
     const order = new Order(payload);
     await order.save();
