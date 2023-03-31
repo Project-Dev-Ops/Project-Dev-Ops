@@ -6,32 +6,60 @@ body{
 }
 
 .texthome{
+    margin-top: 50px;
+}
+#texthome{
     color: black;
     size: 100px;
     text-align: center;
     position: relative;
 }
 .main{
-    position: relative;
+    position: center;
 }
 
 .homeImage{
     display: flex;
     justify-content: center;
     
+    
+}
+
+.homeImage:hover{
+    transition: all 3.0s;
+    transform: rotate(360deg);
 }
 
 .bottom{
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 .bottomhome{
     background-color: rgb(240, 117, 9);
     border-radius: 30px;
     padding: 20px;
     border-style: none;
+    border: 50px 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 500;
 }
+
+.bottomhome:active {
+    color: rgb(174, 17, 0);
+  }
+
+#leaf1{
+    background-position: left bottom;
+    transform: rotate(30deg);
+}
+
+.textabout{
+    
+    margin: 50px;
+}
+
 
 /* Customer navbar */
 .navbar{

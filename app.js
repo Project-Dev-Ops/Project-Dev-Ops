@@ -69,17 +69,15 @@ app.post('/login', async(req, res) => {
 app.get('/register', (req, res) => {
     res.sendFile(__dirname + '/public/html/register.html');
 });
-
 app.get('/about', (req, res) => {
     res.render('about')
 });
-
 app.get('/menu', (req, res) => {
     res.render('./menu.ejs')
 });
 
 app.get('/foodMenu', (req, res) => {
-    res.render('./foodMenu')
+    res.render('foodMenu.ejs')
 });
 
 app.get('/order', (req, res) => {
