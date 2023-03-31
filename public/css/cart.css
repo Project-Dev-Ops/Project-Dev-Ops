@@ -4,6 +4,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-sizing: border-box;
     justify-content: space-between;
+    text-align: center;
   
 }
 
@@ -105,4 +106,5 @@ input{
     background-position: center;
     position: relative;
 }
+
 
