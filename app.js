@@ -6,9 +6,6 @@ const app = express();
 const lodash = require("lodash");
 
 
-
-
-
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
@@ -36,7 +33,11 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/menu', (req, res) => {
-    res.render('menu')
+    res.render('./menu.ejs')
+});
+
+app.get('/foodMenu', (req, res) => {
+    res.render('./foodMenu')
 });
 
 app.get('/order', (req, res) => {
