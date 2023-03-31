@@ -177,16 +177,31 @@ app.get('/staffHome', (req, res) => {
     res.render('staffView/staffHome.ejs')
 });
 
-app.listen('3000',  async function(err){
-    if(!err){
-        console.log("Server is running on port 3000.")
-    }
+app.post("/information", async(req,res) =>{
+  const cart = new Cart(req.session.cart)
+  if(cart.toArray().length == 0) return res.redirect('/menu')
+  console.log(req.body);
 
-    const order = new Order(payload);
-    await order.save();
-    req.session.cart = new Cart({});
-    res.redirect('/tracking/'+order.id);
-    
+  
+  let items = []
+  cart.toArray().forEach( item => {
+      items.push( {'name': item.name , 'note': item.note} )
+  })
+
+  const payload = {
+      owner: req.session.userId,
+      fullname: req.body.fullname,
+      phone_number: req.body.phone_number ,
+      address: req.body.address ,
+      items,
+      total_price: (items.length * 100)
+  }
+
+  const order = new Order(payload);
+  await order.save();
+  req.session.cart = new Cart({});
+  res.redirect('/tracking/'+order.id);
+  
 });
 
 app.get("/tracking/:id", async(req, res) => {
