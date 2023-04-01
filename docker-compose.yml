@@ -2,5 +2,6 @@ version: '3.3'
 services:
   frontend:
     image: sasipha/front-end:latest
+    restart: always
     ports:
       - "8080:3000"
