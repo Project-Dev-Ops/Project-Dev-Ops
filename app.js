@@ -8,7 +8,7 @@ const { connect } = require("./config/db");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const { User } = require("./model/user");
-const Cart = require("./model/Cart");
+const Cart = require("./model/cart");
 const { Order } = require("./model/order");
 
 connect();
