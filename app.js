@@ -19,7 +19,7 @@ app.use(
     saveUninitialized: true,
     cookie: { maxAge: 3600000 },
     store: MongoStore.create({
-    mongoUrl: `mongodb://54.146.61.123:8105/kodnuey`,
+    mongoUrl: `mongodb://34.232.198.199:8105/kodnuey`,
     dbName: "kodnuey"
     }),
   })

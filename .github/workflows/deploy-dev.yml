@@ -1,0 +1,45 @@
+name: deploy dev
+on:
+  push:
+    branches:
+      - Dev
+
+jobs:
+  deploy-app:
+    runs-on: ubuntu-latest
+    steps:
+      - 
+        name: Checkout
+        uses: actions/checkout@v3
+      - 
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - 
+        name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v4
+        with:
+          push: true
+          tags: sasipha/front-end:latest
+      -
+        name: Prepare the docker-compose run
+        run: |
+              ls -l
+      - 
+        name: Prepare docker-compose run
+        run: |
+          mkdir kodnuey-Dev
+          cp docker-compose.yml kodnuey-Dev/docker-compose.yml
+          cd kodnuey-Dev 
+          docker-compose -H ${{ secrets.DOCKER_HOST_SERVER }} down 
+          docker-compose -H ${{ secrets.DOCKER_HOST_SERVER }} pull
+          docker-compose -H ${{ secrets.DOCKER_HOST_SERVER }} up -d
+
