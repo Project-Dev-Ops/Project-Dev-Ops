@@ -16,14 +16,18 @@
         <img src="/public/images/bibimbap.png" alt="bibimbap" width="100px">
     </div>
 
-    <div>
-        <h5>Note to restaurant:</h5>
-        <input type="text" class="note"> 
-    </div>
-
-    <div>
-        <button class="button" type="submit" onclick="">Add to cart</button>
-    </div>
     
+    <form action="/addToCart" method="post">
+        <div>
+            <h5>Note to restaurant</h5>
+            <input type="text" name="note">
+            <input type="hidden"  value="Bibimbap" name="name"/>
+        </div>
+        
+        <div>
+            <button type="submit" onclick="">Add to cart</button>
+        </div>
+    </form>
+   
 </body>
 </html>
