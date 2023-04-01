@@ -8,7 +8,7 @@ const { connect } = require("./config/db");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const { User } = require("./model/user");
-const Cart = require("./model/Cart");
+const Cart = require("./model/cart");
 const { Order } = require("./model/order");
 
 connect();
@@ -19,7 +19,7 @@ app.use(
     saveUninitialized: true,
     cookie: { maxAge: 3600000 },
     store: MongoStore.create({
-    mongoUrl: `mongodb://35.175.104.58:8105/kodnuey`,
+    mongoUrl: `mongodb://34.232.198.199:8105/kodnuey`,
     dbName: "kodnuey"
     }),
   })
